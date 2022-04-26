@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:structure_study/ui/viewmodels/auth/login/login_bindings.dart';
 import 'package:structure_study/ui/viewmodels/user/user_bindings.dart';
 import 'root_page.dart';
 
@@ -9,6 +10,6 @@ class PageRouter {
     GetPage(
         name: RootPage.routeName,
         page: () => RootPage(),
-        bindings: [UserBindings()]),
+        bindings: [UserBindings(), LoginBindings()]),
   ];
 }

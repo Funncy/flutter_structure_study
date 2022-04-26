@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'user_model.dart';
+part of 'login_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,81 +14,80 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UserModel _$UserModelFromJson(Map<String, dynamic> json) {
-  return _UserModel.fromJson(json);
+LoginModel _$LoginModelFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'default':
-      return _UserModel.fromJson(json);
+      return _LoginModel.fromJson(json);
     case 'initial':
       return Initial.fromJson(json);
     case 'loading':
       return Loading.fromJson(json);
     case 'error':
       return Error.fromJson(json);
-    case 'empty':
-      return Empty.fromJson(json);
+    case 'loaded':
+      return Loaded.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'UserModel',
+      throw CheckedFromJsonException(json, 'runtimeType', 'LoginModel',
           'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
 /// @nodoc
-mixin _$UserModel {
+mixin _$LoginModel {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(int id, String email, String username) $default, {
+    TResult Function(String email, String password) $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String? message) error,
-    required TResult Function() empty,
+    required TResult Function() loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_UserModel value) $default, {
+    TResult Function(_LoginModel value) $default, {
     required TResult Function(Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Error value) error,
-    required TResult Function(Empty value) empty,
+    required TResult Function(Loaded value) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -96,55 +95,52 @@ mixin _$UserModel {
 }
 
 /// @nodoc
-abstract class $UserModelCopyWith<$Res> {
-  factory $UserModelCopyWith(UserModel value, $Res Function(UserModel) then) =
-      _$UserModelCopyWithImpl<$Res>;
+abstract class $LoginModelCopyWith<$Res> {
+  factory $LoginModelCopyWith(
+          LoginModel value, $Res Function(LoginModel) then) =
+      _$LoginModelCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserModelCopyWithImpl<$Res> implements $UserModelCopyWith<$Res> {
-  _$UserModelCopyWithImpl(this._value, this._then);
+class _$LoginModelCopyWithImpl<$Res> implements $LoginModelCopyWith<$Res> {
+  _$LoginModelCopyWithImpl(this._value, this._then);
 
-  final UserModel _value;
+  final LoginModel _value;
   // ignore: unused_field
-  final $Res Function(UserModel) _then;
+  final $Res Function(LoginModel) _then;
 }
 
 /// @nodoc
-abstract class _$UserModelCopyWith<$Res> {
-  factory _$UserModelCopyWith(
-          _UserModel value, $Res Function(_UserModel) then) =
-      __$UserModelCopyWithImpl<$Res>;
-  $Res call({int id, String email, String username});
+abstract class _$LoginModelCopyWith<$Res> {
+  factory _$LoginModelCopyWith(
+          _LoginModel value, $Res Function(_LoginModel) then) =
+      __$LoginModelCopyWithImpl<$Res>;
+  $Res call({String email, String password});
 }
 
 /// @nodoc
-class __$UserModelCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
-    implements _$UserModelCopyWith<$Res> {
-  __$UserModelCopyWithImpl(_UserModel _value, $Res Function(_UserModel) _then)
-      : super(_value, (v) => _then(v as _UserModel));
+class __$LoginModelCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
+    implements _$LoginModelCopyWith<$Res> {
+  __$LoginModelCopyWithImpl(
+      _LoginModel _value, $Res Function(_LoginModel) _then)
+      : super(_value, (v) => _then(v as _LoginModel));
 
   @override
-  _UserModel get _value => super._value as _UserModel;
+  _LoginModel get _value => super._value as _LoginModel;
 
   @override
   $Res call({
-    Object? id = freezed,
     Object? email = freezed,
-    Object? username = freezed,
+    Object? password = freezed,
   }) {
-    return _then(_UserModel(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+    return _then(_LoginModel(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      username: username == freezed
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -152,91 +148,84 @@ class __$UserModelCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserModel implements _UserModel {
-  const _$_UserModel(
-      {required this.id,
-      required this.email,
-      required this.username,
-      final String? $type})
+class _$_LoginModel implements _LoginModel {
+  const _$_LoginModel(
+      {required this.email, required this.password, final String? $type})
       : $type = $type ?? 'default';
 
-  factory _$_UserModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserModelFromJson(json);
+  factory _$_LoginModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LoginModelFromJson(json);
 
-  @override
-  final int id;
   @override
   final String email;
   @override
-  final String username;
+  final String password;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'UserModel(id: $id, email: $email, username: $username)';
+    return 'LoginModel(email: $email, password: $password)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
+            other is _LoginModel &&
             const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.username, username));
+            const DeepCollectionEquality().equals(other.password, password));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(username));
+      const DeepCollectionEquality().hash(password));
 
   @JsonKey(ignore: true)
   @override
-  _$UserModelCopyWith<_UserModel> get copyWith =>
-      __$UserModelCopyWithImpl<_UserModel>(this, _$identity);
+  _$LoginModelCopyWith<_LoginModel> get copyWith =>
+      __$LoginModelCopyWithImpl<_LoginModel>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(int id, String email, String username) $default, {
+    TResult Function(String email, String password) $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String? message) error,
-    required TResult Function() empty,
+    required TResult Function() loaded,
   }) {
-    return $default(id, email, username);
+    return $default(email, password);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
   }) {
-    return $default?.call(id, email, username);
+    return $default?.call(email, password);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if ($default != null) {
-      return $default(id, email, username);
+      return $default(email, password);
     }
     return orElse();
   }
@@ -244,11 +233,11 @@ class _$_UserModel implements _UserModel {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_UserModel value) $default, {
+    TResult Function(_LoginModel value) $default, {
     required TResult Function(Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Error value) error,
-    required TResult Function(Empty value) empty,
+    required TResult Function(Loaded value) loaded,
   }) {
     return $default(this);
   }
@@ -256,11 +245,11 @@ class _$_UserModel implements _UserModel {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
   }) {
     return $default?.call(this);
   }
@@ -268,11 +257,11 @@ class _$_UserModel implements _UserModel {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -283,24 +272,22 @@ class _$_UserModel implements _UserModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserModelToJson(this);
+    return _$$_LoginModelToJson(this);
   }
 }
 
-abstract class _UserModel implements UserModel {
-  const factory _UserModel(
-      {required final int id,
-      required final String email,
-      required final String username}) = _$_UserModel;
+abstract class _LoginModel implements LoginModel {
+  const factory _LoginModel(
+      {required final String email,
+      required final String password}) = _$_LoginModel;
 
-  factory _UserModel.fromJson(Map<String, dynamic> json) =
-      _$_UserModel.fromJson;
+  factory _LoginModel.fromJson(Map<String, dynamic> json) =
+      _$_LoginModel.fromJson;
 
-  int get id => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
-  String get username => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$UserModelCopyWith<_UserModel> get copyWith =>
+  _$LoginModelCopyWith<_LoginModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -311,7 +298,7 @@ abstract class $InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -333,7 +320,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'UserModel.initial()';
+    return 'LoginModel.initial()';
   }
 
   @override
@@ -349,11 +336,11 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(int id, String email, String username) $default, {
+    TResult Function(String email, String password) $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String? message) error,
-    required TResult Function() empty,
+    required TResult Function() loaded,
   }) {
     return initial();
   }
@@ -361,11 +348,11 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
   }) {
     return initial?.call();
   }
@@ -373,11 +360,11 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -389,11 +376,11 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_UserModel value) $default, {
+    TResult Function(_LoginModel value) $default, {
     required TResult Function(Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Error value) error,
-    required TResult Function(Empty value) empty,
+    required TResult Function(Loaded value) loaded,
   }) {
     return initial(this);
   }
@@ -401,11 +388,11 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
   }) {
     return initial?.call(this);
   }
@@ -413,11 +400,11 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -432,7 +419,7 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements UserModel {
+abstract class Initial implements LoginModel {
   const factory Initial() = _$Initial;
 
   factory Initial.fromJson(Map<String, dynamic> json) = _$Initial.fromJson;
@@ -445,7 +432,7 @@ abstract class $LoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
+class _$LoadingCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
     implements $LoadingCopyWith<$Res> {
   _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
       : super(_value, (v) => _then(v as Loading));
@@ -467,7 +454,7 @@ class _$Loading implements Loading {
 
   @override
   String toString() {
-    return 'UserModel.loading()';
+    return 'LoginModel.loading()';
   }
 
   @override
@@ -483,11 +470,11 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(int id, String email, String username) $default, {
+    TResult Function(String email, String password) $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String? message) error,
-    required TResult Function() empty,
+    required TResult Function() loaded,
   }) {
     return loading();
   }
@@ -495,11 +482,11 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
   }) {
     return loading?.call();
   }
@@ -507,11 +494,11 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -523,11 +510,11 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_UserModel value) $default, {
+    TResult Function(_LoginModel value) $default, {
     required TResult Function(Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Error value) error,
-    required TResult Function(Empty value) empty,
+    required TResult Function(Loaded value) loaded,
   }) {
     return loading(this);
   }
@@ -535,11 +522,11 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
   }) {
     return loading?.call(this);
   }
@@ -547,11 +534,11 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -566,7 +553,7 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements UserModel {
+abstract class Loading implements LoginModel {
   const factory Loading() = _$Loading;
 
   factory Loading.fromJson(Map<String, dynamic> json) = _$Loading.fromJson;
@@ -580,7 +567,7 @@ abstract class $ErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
+class _$ErrorCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
     implements $ErrorCopyWith<$Res> {
   _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
       : super(_value, (v) => _then(v as Error));
@@ -616,7 +603,7 @@ class _$Error implements Error {
 
   @override
   String toString() {
-    return 'UserModel.error(message: $message)';
+    return 'LoginModel.error(message: $message)';
   }
 
   @override
@@ -640,11 +627,11 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(int id, String email, String username) $default, {
+    TResult Function(String email, String password) $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String? message) error,
-    required TResult Function() empty,
+    required TResult Function() loaded,
   }) {
     return error(message);
   }
@@ -652,11 +639,11 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
   }) {
     return error?.call(message);
   }
@@ -664,11 +651,11 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -680,11 +667,11 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_UserModel value) $default, {
+    TResult Function(_LoginModel value) $default, {
     required TResult Function(Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Error value) error,
-    required TResult Function(Empty value) empty,
+    required TResult Function(Loaded value) loaded,
   }) {
     return error(this);
   }
@@ -692,11 +679,11 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
   }) {
     return error?.call(this);
   }
@@ -704,11 +691,11 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -723,7 +710,7 @@ class _$Error implements Error {
   }
 }
 
-abstract class Error implements UserModel {
+abstract class Error implements LoginModel {
   const factory Error([final String? message]) = _$Error;
 
   factory Error.fromJson(Map<String, dynamic> json) = _$Error.fromJson;
@@ -734,40 +721,41 @@ abstract class Error implements UserModel {
 }
 
 /// @nodoc
-abstract class $EmptyCopyWith<$Res> {
-  factory $EmptyCopyWith(Empty value, $Res Function(Empty) then) =
-      _$EmptyCopyWithImpl<$Res>;
+abstract class $LoadedCopyWith<$Res> {
+  factory $LoadedCopyWith(Loaded value, $Res Function(Loaded) then) =
+      _$LoadedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EmptyCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
-    implements $EmptyCopyWith<$Res> {
-  _$EmptyCopyWithImpl(Empty _value, $Res Function(Empty) _then)
-      : super(_value, (v) => _then(v as Empty));
+class _$LoadedCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
+    implements $LoadedCopyWith<$Res> {
+  _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
+      : super(_value, (v) => _then(v as Loaded));
 
   @override
-  Empty get _value => super._value as Empty;
+  Loaded get _value => super._value as Loaded;
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$Empty implements Empty {
-  const _$Empty({final String? $type}) : $type = $type ?? 'empty';
+class _$Loaded implements Loaded {
+  const _$Loaded({final String? $type}) : $type = $type ?? 'loaded';
 
-  factory _$Empty.fromJson(Map<String, dynamic> json) => _$$EmptyFromJson(json);
+  factory _$Loaded.fromJson(Map<String, dynamic> json) =>
+      _$$LoadedFromJson(json);
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'UserModel.empty()';
+    return 'LoginModel.loaded()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Empty);
+        (other.runtimeType == runtimeType && other is Loaded);
   }
 
   @JsonKey(ignore: true)
@@ -777,39 +765,39 @@ class _$Empty implements Empty {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(int id, String email, String username) $default, {
+    TResult Function(String email, String password) $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String? message) error,
-    required TResult Function() empty,
+    required TResult Function() loaded,
   }) {
-    return empty();
+    return loaded();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
   }) {
-    return empty?.call();
+    return loaded?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(int id, String email, String username)? $default, {
+    TResult Function(String email, String password)? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String? message)? error,
-    TResult Function()? empty,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
-    if (empty != null) {
-      return empty();
+    if (loaded != null) {
+      return loaded();
     }
     return orElse();
   }
@@ -817,51 +805,51 @@ class _$Empty implements Empty {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_UserModel value) $default, {
+    TResult Function(_LoginModel value) $default, {
     required TResult Function(Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Error value) error,
-    required TResult Function(Empty value) empty,
+    required TResult Function(Loaded value) loaded,
   }) {
-    return empty(this);
+    return loaded(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
   }) {
-    return empty?.call(this);
+    return loaded?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_UserModel value)? $default, {
+    TResult Function(_LoginModel value)? $default, {
     TResult Function(Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Error value)? error,
-    TResult Function(Empty value)? empty,
+    TResult Function(Loaded value)? loaded,
     required TResult orElse(),
   }) {
-    if (empty != null) {
-      return empty(this);
+    if (loaded != null) {
+      return loaded(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmptyToJson(this);
+    return _$$LoadedToJson(this);
   }
 }
 
-abstract class Empty implements UserModel {
-  const factory Empty() = _$Empty;
+abstract class Loaded implements LoginModel {
+  const factory Loaded() = _$Loaded;
 
-  factory Empty.fromJson(Map<String, dynamic> json) = _$Empty.fromJson;
+  factory Loaded.fromJson(Map<String, dynamic> json) = _$Loaded.fromJson;
 }
