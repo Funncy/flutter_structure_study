@@ -10,6 +10,11 @@ class UserModel with _$UserModel {
       required String email,
       required String username}) = _UserModel;
 
+  const factory UserModel.initial() = Initial;
+  const factory UserModel.loading() = Loading;
+  const factory UserModel.error([String? message]) = Error;
+  const factory UserModel.empty() = Empty;
+
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
 }

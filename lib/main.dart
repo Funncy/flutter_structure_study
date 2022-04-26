@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:structure_study/ui/pages/page_router.dart';
 
 import 'ui/pages/root_page.dart';
 
@@ -11,12 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RootPage(),
+      initialRoute: PageRouter.initial,
+      getPages: PageRouter.routes,
     );
   }
 }
